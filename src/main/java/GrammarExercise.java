@@ -22,7 +22,7 @@ public class GrammarExercise {
         List<String> secondList = Arrays.asList(secondWordList.split(","));
         Predicate<String> isWord = s -> s.matches("^[a-zA-Z]+$");
         if (!firstList.stream().allMatch(isWord) || !secondList.stream().allMatch(isWord)) {
-            throw new RuntimeException();
+            throw new RuntimeException("input not valid");
         };
         return firstList
                 .stream()
